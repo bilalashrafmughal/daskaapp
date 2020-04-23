@@ -1,0 +1,62 @@
+.Home{
+    height: 92vh;
+background: #FF0099;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #493240, #FF0099);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #493240, #FF0099); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.Home-hero{
+    text-align: center;
+}
+.Home-hero h1{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    font-size: 50px;
+}
+.Home-hero h1 span{
+    background-color: white;
+    color: #FF0099 ;
+    font-weight: 800;
+    font-size: 70px;
+    border-bottom: 6px solid #FF0099 ;
+}
+.Home-buttons a{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    padding: 8px 50px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+.Home-buttons a.btn-active{
+    background-color: white;
+    color: #FF0099;
+    transition: ease all 0.3s;
+}
+.Home-buttons a.not-active{
+    border: 1px solid white;
+    transition: ease all 0.3s;
+
+}
+.Home-buttons a.btn-active:hover{
+    background-color: #FF0099;
+    color: white;
+}
+.Home-buttons a.not-active:hover{
+    background-color: white;
+    color: #FF0099;
+}
+.Home-hero h4{
+    color: white;
+    text-transform: uppercase;
+    margin-top: 5rem;
+    font-weight: 300;
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+.Home-hero h4 span{
+    border-bottom: 6px solid white;
+}

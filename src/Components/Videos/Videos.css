@@ -1,0 +1,107 @@
+.card{
+    position: relative;
+}
+
+.card-body{
+    border: 1px solid rgb(231, 230, 230);
+}
+.card-body h6{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.video-props{
+    transform: translate(0,15px);
+}
+.video-props p{
+    margin: 0;
+}
+.video-props p i{
+    color: #FF0099;
+}
+.total-pages{
+    text-align: center;
+}
+.card .video-length{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    background-color: transparent;
+    display: inline-block;
+}
+.video-length p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    background-color: #FF0099;
+    padding: 1px 2px;
+    color: white;
+}
+.video-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    cursor: pointer;
+    transition: ease all 0.25s;
+}
+.video-overlay i{
+    position: absolute;
+    font-size: 50px;
+    color: #FF0099;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+}
+.card img:hover{
+    transform: scale(1.5);
+}
+.video-overlay:hover {
+    opacity: 0.7;
+    transform: scale(1.5);
+}
+.page-controller{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    justify-content: space-evenly;
+}
+.page-controller button{
+    background-color: #FF0099;
+    padding: 0.5rem 2rem;
+    border: none;
+    color: white;
+    border-radius: 6px;
+}
+.page-form input[type=number]{
+    padding: 0.5rem 2rem;
+    width: 20rem;
+    border: none;
+    border-bottom: 1px solid #FF0099;
+}
+.page-form input[type=submit]{
+    background-color: #FF0099;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+
+}
+.card:hover .Card img{
+    transform: scale(1.5);
+
+}
+.card{
+    overflow: hidden;
+}
+.Loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

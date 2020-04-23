@@ -1,0 +1,34 @@
+.Navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    background-color: rgb(71, 67, 67);
+}
+.Nav-list a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    transition: ease all 0.3s;
+}
+.Nav-logo{
+    margin-left: 20px;
+    width: 20%;
+}
+.Nav-logo h2{
+    color: white;
+}
+.Nav-logo h2 i{
+    font-size: 35px;
+    color: #FF0099;
+    margin-right: 10px;
+}
+.active-link{
+    display: inline-block;
+    border-bottom: 3px solid #FF0099;
+}
+.Nav-list a:hover{
+    color: #FF0099;
+}

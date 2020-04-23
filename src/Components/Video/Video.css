@@ -1,0 +1,45 @@
+.video-text{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border-top: 1px solid rgb(194, 186, 186);
+}
+.video-text h2{
+    margin-left: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(252, 122, 200);
+}
+.video-text p{
+    margin-left: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+.video-views-section{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 30px;   
+}
+.video-views-section h3{
+    color: white;
+    text-transform: uppercase;
+}
+.video-views-section h6{
+    margin-top: 10px;
+    color: white;
+}
+.video-views-section h6 i{
+    color: #FF0099;
+}
+.video-frame{
+    background-color: rgb(34, 33, 33);
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 80px 0;
+}
+.video-frame iframe{
+    width: 50%;
+    height: 350px;
+}

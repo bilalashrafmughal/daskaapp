@@ -1,0 +1,12 @@
+var EPREFadIframes=['footadframe','movieplayer-box-adv-iframe','adPlayerIfr'];var EPREFadIframesCt=[0,0,0];var EPREFttl=240;function EPREFadIfrChk(){for(var i=0,len=EPREFadIframes.length;i<len;i++){if(EPREFisVisible(EPREFadIframes[i]))EPREFadIframesCt[i]++;if(EPREFadIframesCt[i]>=EPREFttl){EPREFrld(EPREFadIframes[i]);EPREFadIframesCt[i]=0;}}
+window.setTimeout(EPREFadIfrChk,1000);}
+function EPREFisVisible(iframe_id){if($('#'+iframe_id).length==0)return false;var ifrId=iframe_id;var ifrOffset=$('#'+iframe_id).offset().top;var ifrHeight=$('#'+iframe_id).height();var ifrBot=ifrOffset+ifrHeight;var viewtop=window.scrollY;var viewbot=viewtop+window.innerHeight;if(viewbot>ifrBot-ifrHeight*0.5&&ifrOffset>viewtop-ifrHeight*0.5){return true;}else{return false;}}
+function EPREFrld(ifrId){var cachebuster=Math.round(new Date().getTime()/ 1000);EPREFinsertParam(ifrId,'cb',cachebuster);}
+function EPREFinsertParam(ifrId,key,value){key=escape(key);value=escape(value);var kvp=window.document.getElementById(ifrId).contentWindow.document.location.search.substr(1).split('&');if(kvp==''){window.document.getElementById(ifrId).contentWindow.document.location.search='?'+key+'='+value;}
+else{var i=kvp.length;var x;while(i--){x=kvp[i].split('=');if(x[0]==key){x[1]=value;kvp[i]=x.join('=');break;}}
+if(i<0){kvp[kvp.length]=[key,value].join('=');}
+window.document.getElementById(ifrId).contentWindow.document.location.search=kvp.join('&');}}
+if(typeof EPREFadIframes!=="undefined"&&typeof EPREFttl!=="undefined"){EPREFadIfrChk(EPREFttl);}
+if(typeof(window.performance.timing.toJSON)=="function"&&document.cookie.indexOf('EPperformanceCounters')==-1){window.onload=function(){window.setTimeout(function(){var PCfcp=0;window.performance.getEntriesByType('paint').forEach(function(performanceEntry,i,entries){if(performanceEntry.name=='first-contentful-paint')PCfcp=performanceEntry.startTime;});if(PCfcp){var PCdata={};PCdata.fcp=PCfcp;PCdata.timing=window.performance.timing.toJSON();$.ajax({type:"POST",url:"/performanceCounters.php",data:PCdata});}
+document.cookie="EPperformanceCounters=done; path=/";},1000);};}
+function EPeventFire(el,etype){if(el.fireEvent){el.fireEvent('on'+etype);}else{var evObj=document.createEvent('Events');evObj.initEvent(etype,true,false);el.dispatchEvent(evObj);}}
